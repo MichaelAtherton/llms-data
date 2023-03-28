@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Postcard</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .postcard {
+        width: 350px;
+        height: 490px;
+        border: 1px solid #000;
+        margin: 30px auto;
+        position: relative;
+        overflow: hidden;
+    }
+    .front, .back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .front {
+        background-image: url('path/to/front_image.jpg');
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+    }
+    .front h1 {
+        text-align: center;
+        font-size: 28px;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        padding-top: 180px;
+        margin: 0;
+    }
+    .back {
+        background-color: #fff;
+        padding: 20px;
+        z-index: 0;
+        display: none;
+    }
+    .back h2, .back h3, .back p {
+        margin: 0;
+        padding: 0;
+    }
+    .back h2 {
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+    .back h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .back p {
+        font-size: 14px;
+        margin-bottom: 12px;
+        line-height: 1.3;
+    }
+    .back a {
+        display: inline-block;
+        font-size: 14px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #333;
+        padding: 10px 15px;
+        border-radius: 4px;
+    }
+    .back img {
+        display: block;
+        width: 120px;
+        margin: 15px 0;
+    }
+</style>
+</head>
+<body>
+<div class="postcard">
+    <div class="front">
+        <h1>Unlock Your Land's Potential with Tiny Homes</h1>
+    </div>
+    <div class="back">
+        <h2>Transform Your Moab Property into a Thriving Community</h2>
+        <h3>Partner with us - ZERO investment needed!</h3>
+        <p>Dear Landowner,</p>
+        <p>Do you have 3+ acres in Moab, Utah? Partner with our team of tiny home developers and benefit from:</p>
+        <ul>
+            <li>High demand for sustainable, eco-friendly housing</li>
+            <li>Passive income generation</li>
+            <li>Preserving Moab's natural beauty</li>
+        </ul>
+        <p>We'll handle permits, zoning, construction, and management. You provide the land, we share the profits.</p>
+        <p>Visit the link below, submit your name and email, and let's discuss this opportunity.</p>
+        <p><a href="https://shortened-url.com">shortened-url.com
+</a></p>
+        <p>Seize this chance and uncover your land's true value!</p>
+        <p>Best,</p>
+        <img src="path/to/company_logo.png" alt="Your Company Name and Logo">
+    </div>
+</div>
+<script>
+    document.querySelector(".front").addEventListener("click", function() {
+        this.style.display = "none";
+        document.querySelector(".back").style.display = "block";
+    });
+
+    document.querySelector(".back").addEventListener("click", function() {
+        this.style.display = "none";
+        document.querySelector(".front").style.display = "block";
+    });
+</script>
+</body>
+</html>
+
